@@ -1,0 +1,15 @@
+galaxy_info:
+  author: Joe Nyland
+  role_name: users
+  namespace: joenyland
+  description: Configures users
+  license: MIT
+  min_ansible_version: '2.1'
+  platforms:
+  - name: Debian
+    versions:
+      - bullseye # 12 (stable)
+      - buster # 11 (oldstable)
+      - stretch # 10 (oldoldstable)
+  galaxy_tags: []
+dependencies: []

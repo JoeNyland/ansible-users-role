@@ -1,0 +1,11 @@
+---
+- name: Configure users
+  tags: users
+  become: true
+  block:
+    - name: Create user
+      user:
+        name: "{{ item.key }}"
+        shell: "{{ item.value.shell | default(omit) }}"
+        password_lock: "{{ item.value.password_lock | default(omit) }}"
+      with_dict: "{{ users }}"
