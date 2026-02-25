@@ -8,4 +8,8 @@
         name: "{{ item.key }}"
         shell: "{{ item.value.shell | default(omit) }}"
         password_lock: "{{ item.value.password_lock | default(omit) }}"
+        home: "{{ item.value.home | default(omit) }}"
+        system: "{{ item.value.system | default(omit) }}"
+        skeleton: "{{ item.value.skeleton | default(omit) }}"
+        create_home: "{{ item.value.create_home | default(omit) }}"
       with_dict: "{{ users }}"
